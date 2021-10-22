@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-const generateReadme = require("utils/generateMarkdown.js");
+const generateReadme = require("./utils/generateMarkdown.js");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // User questions
@@ -34,18 +34,16 @@ const questions = [
         message: "Please choose a license for this project:",
         choices: [
             "Apache",
-            "Academic",
             "GNU",
             "MIT",
-            "GPL",
-            "Open",
+            "GPLv3",
             "None"
         ]
     },
     {
         type: "input",
-        name: "contributors",
-        message: "Who are the contributors to this project?"
+        name: "contribution",
+        message: "What are the contribution guidelines surrounding this project?"
     },
     {
         type: "input",
@@ -62,13 +60,23 @@ const questions = [
         name: "email",
         message: "What is your email address?"
     },
-];
+  ]
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//function writeToFile(data) {
+inquirer
+    .prompt(questions)
+    .then(function(data){
+        const filename = `${data.title.toLowerCase().split(' ').join('')}.md`;
+
+    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+  });
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+}
 
 // Function call to initialize app
 init();
