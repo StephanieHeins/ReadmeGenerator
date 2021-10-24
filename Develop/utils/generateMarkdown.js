@@ -1,6 +1,8 @@
 function generateReadme(data) {
   return `
-#${data.title}
+${data.title}
+
+
 
 ## Description 
 
@@ -15,7 +17,7 @@ ${data.description}
 - [Contributors](#Contributors)
 - [Test](#Test)
 
-## Installation
+## Installation Instructions
 
 ${data.installation}
 
@@ -27,6 +29,18 @@ ${data.usage}
 
 ${data.licence}
 
+## Contribution
+
+${data.contribution}
+
+## Test
+
+${data.tests}
+
+## Questions/Contact
+
+https://github.com/${data.username}
+${data.email}
 
 `;
 }

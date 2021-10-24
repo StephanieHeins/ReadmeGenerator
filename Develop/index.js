@@ -29,7 +29,7 @@ const questions = [
         message: "What are some instructions for usage?"
     },
     {
-        type: "list",
+        type: "checkbox",
         name: "license",
         message: "Please choose a license for this project:",
         choices: [
@@ -63,11 +63,25 @@ const questions = [
   ]
 
 
+  inquirer
+  .prompt(questions)
+  .then(function(data){
+    const filename = `${data.title.toLowerCase().split(' ').join('')}.md`;
+        fs.writeFile(filename, generateReadme(data), function(err) {
+          if (err) {
+            throw err;
+          };
+  
+          console.log("New README file created with success!");
+        });
+      });
+
+/*
 // WORKS Generated Readme with generateMarkdown 
   inquirer
   .prompt(questions)
   .then(function(data){
-          
+        
         fs.writeFile("README.md", generateReadme(data), function(err) {
           if (err) {
             throw err;
@@ -76,6 +90,7 @@ const questions = [
           console.log("New README file created with success!");
         });
       });
+*/
 
 
 /*
