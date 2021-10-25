@@ -29,7 +29,7 @@ const questions = [
         message: "What are some instructions for usage?"
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Please choose licenses for this project:",
         choices: [
@@ -37,7 +37,7 @@ const questions = [
             "GNU",
             "MIT",
             "GPLv3",
-            "None"
+            "Unlicensed"
         ]
     },
     {

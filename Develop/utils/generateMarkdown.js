@@ -2,6 +2,8 @@ function generateReadme(data) {
   return `
 ${data.title}
 
+[![License](https://img.shields.io/badge/${data.license}-blue.svg)]
+
 ## Description 
 
 ${data.description}
