@@ -31,7 +31,7 @@ const questions = [
     {
         type: "checkbox",
         name: "license",
-        message: "Please choose a license for this project:",
+        message: "Please choose licenses for this project:",
         choices: [
             "Apache",
             "GNU",
@@ -62,7 +62,7 @@ const questions = [
     },
   ]
 
-
+// WORKS Generate Readme with inputted project title
   inquirer
   .prompt(questions)
   .then(function(data){
