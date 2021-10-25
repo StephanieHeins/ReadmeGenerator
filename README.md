@@ -12,7 +12,7 @@ CL-based app that prompts questions about your project, then generates a formatt
 ## Installation Instructions
 
 - Download code
-- Run node index 
+- Run node develop/index.js
 
 ## Languages Used
 
