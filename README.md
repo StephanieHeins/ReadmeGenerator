@@ -8,7 +8,7 @@ CL-based app that prompts questions about your project, then generates a formatt
 
 - [Description](#Description)
 - [Installation](#Installation) 
-- [LanguagesUsed](#Languages Used) 
+- [Languages](#Languages) 
 - [Video](#Video) 
 
 ## Installation Instructions
