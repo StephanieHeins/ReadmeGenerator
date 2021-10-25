@@ -76,6 +76,18 @@ const questions = [
         });
       });
 
+// Function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
+
+
+
+
+
+
+
 /*
 // WORKS Generated Readme with generateMarkdown 
   inquirer
@@ -105,10 +117,3 @@ inquirer
   );
 });
 */
-
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
