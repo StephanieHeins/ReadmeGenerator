@@ -22,3 +22,6 @@ CL-based app that prompts questions about your project, then generates a formatt
 - Boostrap 
 
 ## Video 
+
+https://user-images.githubusercontent.com/15876794/138631611-d366e728-9157-466b-8945-1bef8ff000f2.mov
+
